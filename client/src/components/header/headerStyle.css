@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav {
+    height: 80px;
+    background: #2c2c2c;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 50px 0px 100px;
+}
+
+nav .logo {
+    font-size: 33px;
+    color: white;
+    font-weight: 600;
+    user-select: none;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 8px 10px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a.active {
+    color: black;
+    background: lightgreen;
+}
+
+nav ul li a.logout.active {
+    color: white;
+    background: red;
+}
+
+nav ul li a:hover {
+    color: black;
+    background: lightgreen;
+}
+
+@media (max-width: 975px) {
+    nav ul {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        background: black;
+        height: 100vh;
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+    nav ul li {
+        margin: 40px 0;
+    }
+    nav ul li a {
+        font-size: 20px;
+    }
+}
+
+nav ul li a.logout {
+    color: red;
+}
+
+nav ul li a.logout:hover {
+    color: white;
+    background: red;
+}

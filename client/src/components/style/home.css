@@ -1,0 +1,21 @@
+#home-bg {
+    background-image: url("assets/bg.jpg");
+}
+
+div.container {
+    display: table;
+    margin: 0 auto;
+    padding-top: 350px;
+    user-select: none;
+}
+
+h1.sambutan {
+    color: black;
+    font-size: 70px;
+    font-weight: bold;
+}
+h5{
+    color: black;
+    display: table;
+    margin: 0 auto;
+}

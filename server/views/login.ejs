@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    <title>FA Laundry | Login</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row px-3">
+            <div class="col-lg-10 col-xl-9 card flex-row mx-auto px-0 shadow-lg">
+                <div class="img-left d-none d-md-flex"></div>
+
+                <div class="card-body">
+                    <center>
+                    <h4 class="title text-center mt-4">
+                        LOGIN
+                    </h4>
+                    </center>
+                    <form class="form-box px-3" method="POST" action="/loginSubmit">
+                        <div class="form-input">
+                            <span><i class="fa fa-user"></i></span>
+                            <input type="text" name="username" placeholder="Username" tabindex="10" required>
+                        </div>
+                        <div class="form-input">
+                            <span><i class="fa fa-eye" onclick='showHide();'></i></span>
+                            <input type="password" name="password" placeholder="Password" required>
+                        </div>
+                            
+                        <div class="mb-3">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="cb1" name="">
+                                <label class="custom-control-label" for="cb1">Remember me</label>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <button type="submit" class="btn btn-block text-uppercase" name="login" value="LOG IN">Login</button>
+                        </div><br>
+
+                        <div class="mb-3">
+                            Belum memiliki akun ? <a href="/signup">Klik disini</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        const password = document.getElementById('password');
+        const toggle = document.getElementById('toggle');
+        
+        function showHide(){
+            if(password.type === 'password'){
+                password.setAttribute('type', 'text');
+                toggle.classList.add('hide')
+            } else{
+                password.setAttribute('type', 'password');
+                toggle.classList.remove('hide')
+            }
+        }
+    </script>
+</body>
+</html>
